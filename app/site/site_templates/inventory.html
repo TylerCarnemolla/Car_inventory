@@ -1,0 +1,69 @@
+
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<body>
+
+<div class="header">
+    <h1>Car Dealership Inventory</h1>
+</div>
+    <ul>
+        <li>
+            <img class="inv-photo" src="{{ url_for('static', filename='photos/car1.jpg') }}" alt="Car 1">
+                <div class="info-holder">
+                    <h2>BMW car 1</h2>
+                    <p class="year">Year: 2023</p>
+                    <p class="price" >Price: $30,000</p>
+                </div>
+        </li>
+
+        <li>
+            <img class="inv-photo" src="{{ url_for('static', filename='photos/car2.jpg') }}" alt="Car 2">
+                <div class="info-holder">
+                    <h2>BMW car 2</h2>
+                    <p class="year">Year: 2024</p>
+                    <p class="price">Price: $35,000</p>
+                </div>
+        </li>
+        <li>
+            <img class="inv-photo" src="{{ url_for('static', filename='photos/car3.jpg') }}" alt="Car 1">
+                <div class="info-holder">
+                    <h2>BMW car 3</h2>
+                    <p class="year">Year: 2024</p>
+                    <p class="price">Price: $20,000</p>
+                </div>
+        </li>
+
+        <li>
+            <img class="inv-photo" src="{{ url_for('static', filename='photos/car4.jpg') }}" alt="Car 2">
+                <div class="info-holder">
+                    <h2>BMW car 4</h2>
+                    <p class="year">Year: 2023</p>
+                    <p class="price" >Price: $50,000</p>
+                </div>
+        </li>
+        <li>
+            <img class="inv-photo" src="{{ url_for('static', filename='photos/car5.jpg') }}" alt="Car 1">
+                <div class="info-holder">
+                    <h2>BMW car 5</h2>
+                    <p class="year" >Year: 2024</p>
+                    <p class="price">Price: $30,000</p>
+                </div>
+        </li>
+        <li>
+            <img class="inv-photo" src="{{ url_for('static', filename='photos/car6.jpg') }}" alt="Car 2">
+                <div class="info-holder">
+                    <h2>BMW car 6</h2>
+                    <p class="year" >Year: 2023</p>
+                    <p class="price">Price: $35,000</p>
+                </div>
+            </li>
+
+    </ul>
+
+</body>
+</html>
+{% endblock %}

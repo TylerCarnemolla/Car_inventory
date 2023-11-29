@@ -1,0 +1,33 @@
+<!-- this is the home page -->
+
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<div class="container">
+    <section class="hello" id="home">
+        <h1>Welcome to BMW Carsville</h1>
+        <p>Discover a wide range of high-quality cars at unbeatable prices.</p>
+        <a href="{{ url_for('site.inventory')}}" class="btn">View Inventory</a>
+    </section>
+
+    <section class="about-us" id="about">
+        <h2>About Us</h2>
+        <p>Learn about our dealership's history, values, and commitment to customer satisfaction.</p>
+        <a href="#about" class="btn">About BMW Carsville</a>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to schedule a test drive? Reach out to us!</p>
+        <a href="#contact" class="btn">Contact Us</a>
+        
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2023 Car Dealership. All rights reserved.</p>
+</footer>
+{% endblock %}

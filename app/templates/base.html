@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Your Website{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    
+    <img class="bg" src="{{ url_for('static', filename='photos/car_bg.jpg') }}" alt="My Photo">
+
+    <nav class="navbar">
+        <a class="navbar-title" href="{{ url_for('site.home')}}">BMW of Carsville</a>
+        <a class="navbar-button" href="{{ url_for('site.home')}}">Home</a>
+        <a class="navbar-button" href="{{ url_for('site.inventory')}}">Inventory</a>
+        <a class="navbar-button" href="{{ url_for('site.home')}}">About Us</a>
+        <a class="navbar-button" href="{{ url_for('site.home')}}">Contact Us</a>
+                    <div class="navbar-auth">
+                            {% if current_user.is_authenticated %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url_for('auth.logout')}}">Log Out</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url_for('site.profile')}}">Profile</a>
+                                </li>
+                            {% else %}
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url_for('auth.signin')}}">Sign In</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ url_for('auth.signup')}}">Sign Up</a>
+                                </li>
+                            {% endif %}
+                    </div>
+        </ul>
+    </nav>
+   
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>
