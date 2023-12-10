@@ -8,5 +8,6 @@ class Config():
     FLASK_APP = os.getenv('FLASK_APP')
     FLASK_ENV = os.getenv('FLASK_ENV')
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'Sill have no clue what im doing'
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URI') or 'sqlite:///' + os.path.join(basedir, 'app.db')
+    SQLALCHEMY_DATABASE_URI = "postgresql://jplzcyrq:5Mae4oXflyfk6-cYDOv1oM0lVdQyDQsf@bubble.db.elephantsql.com/jplzcyrq"
     SQLALCHEMY_TRACK_NOTIFICATIONS = False
+    print(SQLALCHEMY_DATABASE_URI)
